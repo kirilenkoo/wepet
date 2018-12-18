@@ -117,4 +117,20 @@ Page({
     })
   },
 
+  doTest: function () {
+    console.log('bind success')
+    const db = wx.cloud.database()
+    db.collection('pet').doc('XBiiFlsqTi00tkoZ').get({
+      success: res => {
+        console.log('[数据库] [查询记录] 成功: ', res)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+  }
 })
