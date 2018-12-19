@@ -10,7 +10,7 @@
 	},
 	"appid": "wx5ade7c0f60d9f14b",
 	"projectname": "wepet",
-	"libVersion": "2.2.5",
+	"libVersion": "2.4.2",
 	"condition": {
 		"search": {
 			"current": -1,

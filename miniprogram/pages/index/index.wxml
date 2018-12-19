@@ -1,4 +1,4 @@
-<!--index.wxml-->
+ <!--index.wxml-->
 <view class="container">
 
   <!-- 用户 openid -->
@@ -44,5 +44,10 @@
     <view class="uploader-text" bindtap="doTest">
       <text>try me</text>
     </view>
+  </view>
+
+  <view wx:for="{{items}}" data-id='{{item.catId}}' bindtap="onItemDetail">
+    <text>{{item.txt}}</text>
+    <image src='{{item.cover}}'></image>
   </view>
 </view>
