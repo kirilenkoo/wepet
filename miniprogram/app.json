@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mainList/mainList",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -11,7 +12,7 @@
   ],
   "window": {
     "backgroundColor": "#FFFFFF",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "口袋妖怪宠物本铺",
     "navigationBarTextStyle": "black"
