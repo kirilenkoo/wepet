@@ -4,11 +4,15 @@
     scroll-y
     class='scroll-container'
     >
-  <view wx:for="{{items}}" data-id='{{item.catId}}' bindtap="onItemDetail" class="card">
-    <image src='{{item.cover}}'></image>
-    <text class="card-title">{{item.txt}}</text>
-    <text class="card-subtitle">{{item.txt}}</text>
+    <view
+    class = "mansory">
+    <view wx:for="{{items}}" data-id='{{item.catId}}' bindtap="onItemDetail" class="card">
+    <image class='img' src='{{item.cover[0]}}' mode='widthFix'></image>
   </view>
+    
+    
+    </view>
+  
   </scroll-view>
   
 </view>
