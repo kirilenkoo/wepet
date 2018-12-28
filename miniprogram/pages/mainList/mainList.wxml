@@ -1,18 +1,23 @@
- <!--index.wxml-->
+<!--index.wxml-->
 <view class="container">
-  <scroll-view
-    scroll-y
-    class='scroll-container'
-    >
-    <view
-    class = "mansory">
-    <view wx:for="{{items}}" data-id='{{item.catId}}' bindtap="onItemDetail" class="card">
-    <image class='img' src='{{item.cover[0]}}' mode='widthFix'></image>
-  </view>
-    
-    
+  <scroll-view scroll-y class='scroll-container'>
+    <view class="divider-bar">
+      新 宠
     </view>
-  
+    <view class="grid">
+      <view wx:for="{{tops}}" wx:for-index="idx" wx:for-item="item" data-id='{{item._id}}' bindtap="onItemDetail" class="grid-{{idx%3}}">
+        <image class='img' src='{{item.cover}}' mode='aspectFill'></image>
+      </view>
+    </view>
+    <view class="divider-bar">
+      萌 宠
+    </view>
+    <view class="mansory">
+      <view wx:for="{{items}}" data-id='{{item._id}}' bindtap="onItemDetail" class="card">
+        <image class='img' src='{{item.cover}}' mode='widthFix'></image>
+      </view>
+    </view>
+
   </scroll-view>
-  
+
 </view>

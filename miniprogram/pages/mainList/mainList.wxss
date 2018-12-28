@@ -1,27 +1,28 @@
 /**index.wxss**/
 
 page {
-  background: #ffffff;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5rpx;
   line-break: 0rpx;
   break-inside: avoid;
   box-sizing: border-box;
 }
+
 .mansory {
-column-count: 2;
+  column-count: 2;
   column-gap: 10rpx;
   counter-reset: item-counter;
 }
 
-.card .img{
+.card .img {
   border-radius: 5rpx 5rpx 0 0;
   margin-bottom: 2rpx;
   position: relative;
@@ -38,15 +39,66 @@ column-count: 2;
   padding: 2rpx 16rpx;
   float: left;
   font-size: 32rpx;
-  
 }
+
 .card-subtitle {
   padding: 2rpx 16rpx;
-  
 }
 
 .scroll-container {
   height: 100%;
   margin-bottom: 200rpx;
-  
+}
+
+.grid-0 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5rpx;
+  margin: 10rpx 15rpx 10rpx 15rpx;
+  width: 720rpx;
+}
+
+.grid-1, .grid-2 {
+  box-shadow: 0 4rpx 6rpx 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 5rpx;
+  display: inline;
+}
+
+.grid-1 {
+  margin: 10rpx 8rpx 10rpx 16rpx;
+}
+
+.grid-2 {
+  margin: 10rpx 16rpx 10rpx 8rpx;
+}
+
+.grid-0 .img {
+  width: 720rpx;
+  border-radius: 5rpx 5rpx 0 0;
+}
+
+.grid-1 .img {
+  width: 351rpx;
+  height: 198rpx;
+  border-radius: 5rpx 5rpx 0 0;
+  margin-top: 15rpx;
+}
+.grid-2 .img {
+  width: 351rpx;
+  height: 198rpx;
+  border-radius: 5rpx 5rpx 0 0;
+  margin-top: 15rpx;
+}
+.divider-bar {
+  text-align: center;
+  width: 690rpx;
+  margin: 20rpx 30rpx 20rpx 30rpx;
+  box-shadow: 0 4rpx 6rpx 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 5rpx;
+  border-width: 2rpx;
+  border-color: rgb(255, 240, 192);
+  border-style: solid;
+  padding: 15rpx 0 15rpx 0;
 }

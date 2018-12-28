@@ -3,7 +3,8 @@ const app = getApp()
 
 Page({
   data: {
-    items: []
+    items: [],
+    tops: [],
   },
 
   onLoad: function () {
@@ -18,11 +19,12 @@ Page({
 
   getItems: function () {
     const db = wx.cloud.database()
-    db.collection('item').get({
+    db.collection('pet').get({
       success: res => {
         console.log(res)
         this.setData({
-          items: res.data
+          items: res.data,
+          tops: res.data
         }
         )
       }
