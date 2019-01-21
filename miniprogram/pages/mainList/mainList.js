@@ -33,15 +33,18 @@ Page({
 
   onItemDetail(event) {
     console.log(event)
-    const db = wx.cloud.database()
-    db.collection('category').doc(event.currentTarget.dataset.id).get(
-      {
-        success: res => {
-          wx.redirectTo({
-            url: '../commonWeb/commonWeb?url=' + res.data.url,
-          })
-        }
-      }
-    )
+    wx.redirectTo({
+      url: '../petDetail/petDetail?id=' + event.currentTarget.dataset.id,
+    })
+    // const db = wx.cloud.database()
+    // db.collection('category').doc(event.currentTarget.dataset.id).get(
+    //   {
+    //     success: res => {
+    //       wx.redirectTo({
+    //         url: '../commonWeb/commonWeb?url=' + res.data.url,
+    //       })
+    //     }
+    //   }
+    // )
   }
 })

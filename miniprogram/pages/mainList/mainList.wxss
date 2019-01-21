@@ -8,30 +8,32 @@ page {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 1rpx 4rpx 8rpx 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5rpx;
   line-break: 0rpx;
   break-inside: avoid;
   box-sizing: border-box;
+  margin: 15rpx 0rpx 15rpx 0rpx;
 }
 
 .mansory {
   column-count: 2;
-  column-gap: 10rpx;
+  column-gap: 15rpx;
   counter-reset: item-counter;
+  padding: 15rpx 15rpx 15rpx 15rpx;
+  
 }
 
 .card .img {
   border-radius: 5rpx 5rpx 0 0;
-  margin-bottom: 2rpx;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 375rpx;
+  width: 100%;
   height: 100%;
 }
 
@@ -51,7 +53,7 @@ page {
 }
 
 .grid-0 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4rpx 6rpx 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5rpx;
   margin: 10rpx 15rpx 10rpx 15rpx;
@@ -59,10 +61,11 @@ page {
 }
 
 .grid-1, .grid-2 {
-  box-shadow: 0 4rpx 6rpx 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4rpx 6rpx 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5rpx;
-  display: inline;
+  display: inline-block;
+  width: 351rpx;
 }
 
 .grid-1 {
@@ -82,13 +85,12 @@ page {
   width: 351rpx;
   height: 198rpx;
   border-radius: 5rpx 5rpx 0 0;
-  margin-top: 15rpx;
+  
 }
 .grid-2 .img {
   width: 351rpx;
   height: 198rpx;
   border-radius: 5rpx 5rpx 0 0;
-  margin-top: 15rpx;
 }
 .divider-bar {
   text-align: center;
@@ -101,4 +103,24 @@ page {
   border-color: rgb(255, 240, 192);
   border-style: solid;
   padding: 15rpx 0 15rpx 0;
+}
+.title {
+  color: black;
+  font-size: 30rpx;
+  display: block;
+  padding: 10rpx 15rpx 5rpx 15rpx;
+  line-height: 30rpx;
+  height: 60rpx;
+}
+.summary {
+  color: gray;
+  display: block;
+  font-size: 20rpx;
+  padding: 5rpx 15rpx 5rpx 15rpx;
+}
+.price {
+  color: orange;
+  display: block;
+  font-size: 24rpx;
+  padding: 5rpx 15rpx 15rpx 15rpx;
 }

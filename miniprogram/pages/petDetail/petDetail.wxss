@@ -1,0 +1,7 @@
+/* pages/petDetail/petDetail.wxss */
+.slide-image {
+  width: 750rpx;
+  height: 420rpx;
+  
+  
+}

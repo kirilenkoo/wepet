@@ -7,6 +7,9 @@
     <view class="grid">
       <view wx:for="{{tops}}" wx:for-index="idx" wx:for-item="item" data-id='{{item._id}}' bindtap="onItemDetail" class="grid-{{idx%3}}">
         <image class='img' src='{{item.cover}}' mode='aspectFill'></image>
+        <text class="title">{{item.title}}</text>
+        <text class="summary">{{item.summary}}</text>
+        <text class='price'>¥ {{item.price}}</text>
       </view>
     </view>
     <view class="divider-bar">
@@ -15,6 +18,9 @@
     <view class="mansory">
       <view wx:for="{{items}}" data-id='{{item._id}}' bindtap="onItemDetail" class="card">
         <image class='img' src='{{item.cover}}' mode='widthFix'></image>
+        <text class="title">{{item.title}}</text>
+        <text class="summary">{{item.summary}}</text>
+        <text class='price'>¥ {{item.price}}</text>
       </view>
     </view>
 

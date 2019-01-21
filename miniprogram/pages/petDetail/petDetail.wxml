@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view>
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{pet.desc}}" wx:for-item="item" wx:if="{{item.url !== undefined}}">
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" mode='aspectFill'/>
+    </swiper-item>
+  </block>
+</swiper>
+<text class="title">{{pet.title}}</text>
+</view>
