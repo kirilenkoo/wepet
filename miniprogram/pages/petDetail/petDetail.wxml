@@ -1,16 +1,29 @@
 <!--index.wxml-->
 <view>
-<swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
->
-  <block wx:for="{{pet.desc}}" wx:for-item="item" wx:if="{{item.url !== undefined}}">
-    <swiper-item>
-      <image src="{{item.url}}" class="slide-image" mode='aspectFill'/>
-    </swiper-item>
-  </block>
-</swiper>
-<text class="title">{{pet.title}}</text>
+  <scroll-view scroll-y class='scroll-container'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{pet.desc}}" wx:for-item="item" wx:if="{{item.url !== undefined}}">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" mode='aspectFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <text class="title">{{pet.title}}</text>
+    <text class='price'>¥ {{pet.price}}</text>
+    <text class='fakeprice'>¥ {{pet.fake_price}}</text>
+    <view class="divider-line-wide"></view>
+    <block wx:for="{{pet.desc}}" wx:for-item="item" wx:if="{{item.text !== undefined}}">
+
+      <text class="content">{{item.text}}</text>
+
+    </block>
+    <text class="wiki">wiki</text>
+    <view class="divider-line-wide"></view>
+    <text class="title">养定个体</text>
+    <view wx:for="{{pet.items}}" wx:for-index="idx" wx:for-item="item" data-imgs='{{item.img}}' bindtap="onItemDetail" class="card">
+      <text class="num">#{{idx}}</text>
+      <image wx:for="{{item.img}}" wx:for-item="petitem" class='img' src='{{petitem}}' mode='aspectFill'></image>
+    </view>
+    </scroll-view>
+    <view bindtap='onBackHome'>返回主页</view>
 </view>

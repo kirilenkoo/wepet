@@ -19,3 +19,15 @@ page::after{
   align-items: left;
   box-sizing: border-box;
 } 
+.divider-line {
+  width: 750rpx;
+  height: 1rpx;
+  background: #f6f6f6;
+  margin: 10rpx 0rpx 10rpx 0rpx;
+}
+.divider-line-wide {
+   width: 750rpx;
+  height: 10rpx;
+  background: #f6f6f6;
+  margin: 10rpx 0rpx 10rpx 0rpx;
+}

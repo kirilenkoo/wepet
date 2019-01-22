@@ -29,5 +29,16 @@ Page({
     })
   },
   
+  onBackHome: function(){
+    wx.redirectTo({
+      url: '../mainList/mainList',
+    })
+  },
 
+  onItemDetail(event){
+    console.log(event)
+    wx.previewImage({
+      urls: event.currentTarget.dataset.imgs// 需要预览的图片http链接列表  
+    })
+  }
 })
